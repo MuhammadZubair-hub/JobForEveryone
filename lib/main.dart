@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_screenutil/flutter_screenutil.dart';
+import 'package:jobforeveryone/assets/screen/other/welcome.dart';
+import 'package:jobforeveryone/utils/constant/appcolors.dart';
 
 void main() {
   runApp(const MainApp());
@@ -9,12 +12,20 @@ class MainApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return const MaterialApp(
-      home: Scaffold(
-        body: Center(
-          child: Text('Hello World!'),
-        ),
-      ),
+    return ScreenUtilInit(
+      designSize: const Size(390, 800),
+      minTextAdapt: true,
+      splitScreenMode: true,
+      child: MaterialApp(
+          debugShowCheckedModeBanner: false,
+          theme: ThemeData(
+            colorScheme: ColorScheme.fromSeed(seedColor: AppColor.themecolor),
+          ),
+          // home: const Login_screeen(),
+          routes: {
+            '/': (context) => const WelcomeScreen(),
+            
+          }),
     );
   }
 }
