@@ -1,6 +1,7 @@
 import "package:flutter/material.dart";
 import "package:flutter/widgets.dart";
 import "package:flutter_screenutil/flutter_screenutil.dart";
+import "package:jobforeveryone/assets/screen/other/jobseeker.dart";
 import "package:jobforeveryone/common/button/welcomebutton.dart";
 import "package:jobforeveryone/utils/constant/appcolors.dart";
 import "package:jobforeveryone/utils/constant/appsize.dart";
@@ -35,7 +36,10 @@ class _WelcomeScreenState extends State<WelcomeScreen> {
                 user: 'Job Seeker',
                 title: 'Find a perfect job here',
                 imageUrl: 'lib/assets/image/job-seeker.png',
-                onPressed: () {}),
+                onPressed: () {
+                  Navigator.push(context,
+                      MaterialPageRoute(builder: (context) => JobSeeker()));
+                }),
             SizedBox(
               height: AppSize.mediumboxheight,
             ),
