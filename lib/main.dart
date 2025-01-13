@@ -19,12 +19,12 @@ class MainApp extends StatelessWidget {
       child: MaterialApp(
           debugShowCheckedModeBanner: false,
           theme: ThemeData(
-            colorScheme: ColorScheme.fromSeed(seedColor: AppColor.themecolor),
+            colorScheme:
+                ColorScheme.fromSeed(seedColor: AppColor.themecolorwhite),
           ),
           // home: const Login_screeen(),
           routes: {
             '/': (context) => const WelcomeScreen(),
-            
           }),
     );
   }
